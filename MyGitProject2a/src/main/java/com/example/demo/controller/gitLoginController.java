@@ -14,7 +14,7 @@ public class gitLoginController {
 		return "gitlogin";
 	}
 
-	@RequestMapping(path = "/gitlogin", method = RequestMethod.POST)
+	@RequestMapping(path = "/gitpralogin", method = RequestMethod.POST)
 	public String gitloginpost(String ID, String PW, RedirectAttributes redirectAttributes) throws IOException {
 		redirectAttributes.addFlashAttribute("ID", ID);
 		redirectAttributes.addFlashAttribute("PASS", PW);
