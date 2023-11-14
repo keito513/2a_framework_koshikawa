@@ -25,4 +25,11 @@ public class MergeHellController {
 		System.out.println("抽選結果: " + winningNumber);
 	}
 
-}
+	
+		static void kadaiA() {
+			for (int i = 1; i <= 10; i++) {
+				System.out.println("現在" + i + "回目のループです");
+			}
+		}
+
+	}
