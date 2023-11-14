@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class gitLoginController {
@@ -15,13 +14,11 @@ public class gitLoginController {
 	}
 
 	@RequestMapping(path = "/gitpralogin", method = RequestMethod.POST)
-	public String gitloginpost(String ID, String PW, RedirectAttributes redirectAttributes) throws IOException {
-		redirectAttributes.addFlashAttribute("ID", ID);
-		redirectAttributes.addFlashAttribute("PASS", PW);
+	public String gitloginpost(String ID, String PW) throws IOException {
 		if ("gitlogin".equals(ID) && "gitpw".equals(PW)) {
-			return "/gititemlist";
+			return "redirect:/gititemlist";
 		} else {
-			return "/gitlogin";
+			return "redirect:/gitlogin";
 		}
 	}
 }
