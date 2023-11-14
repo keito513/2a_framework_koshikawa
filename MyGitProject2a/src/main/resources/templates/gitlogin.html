@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/form.css" />
+<meta charset="UTF-8">
+<title>ログイン画面</title>
+</head>
+<body>
+<div class="area" >
+<form th:action="@{/gitpralogin}" method="POST">
+ID：<input type="text" name="ID"> <br>
+パスワード：<input type="text" name="PW"><br>
+<input type="submit">
+</form>
+</div>
+</body>
+</html>
