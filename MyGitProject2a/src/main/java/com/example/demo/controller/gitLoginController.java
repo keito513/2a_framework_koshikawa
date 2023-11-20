@@ -15,13 +15,13 @@ public class gitLoginController {
 	}
 
 	@RequestMapping(path = "/gitpralogin", method = RequestMethod.POST)
-	public String gitloginpost(String ID, String PW, RedirectAttributes redirectAttributes) throws IOException {
+	public String gitlogin(String ID, String PW, RedirectAttributes redirectAttributes) throws IOException {
 		redirectAttributes.addFlashAttribute("ID", ID);
 		redirectAttributes.addFlashAttribute("PASS", PW);
 		if ("gitlogin".equals(ID) && "gitpw".equals(PW)) {
 			return "/gititemlist";
 		} else {
-			return "/gitlogin";
+			return "/gitpralogin";
 		}
 	}
 }
